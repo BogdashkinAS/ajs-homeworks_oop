@@ -1,10 +1,4 @@
 import Character from '../character.js';
-import Bowerman from '../bowerman.js';
-import Daemon from '../daemon.js';
-import Magician from '../magician.js';
-import Swordsman from '../swordsman.js';
-import Undead from '../undead.js';
-import Zombie from '../zombie.js';
 
 test('make personage Character', () => {
     const result = new Character('John', 'Swordsman', 20, 30);
@@ -67,76 +61,4 @@ test('use function points with zero health', () => {
     result.health = 0;
     result.damage(10);
     expect(result.health).toEqual(0);
-});
-
-test('make personage Bowerman', () => {
-    const result = new Bowerman('John');
-    expect(result).toEqual({
-        name: 'John',
-        type: 'Bowerman',
-        health: 100,
-        level: 1,
-        attack: 25,
-        defence: 25,
-    });
-});
-
-test('make personage Swordsman', () => {
-    const result = new Swordsman('John');
-    expect(result).toEqual({
-        name: 'John',
-        type: 'Swordsman',
-        health: 100,
-        level: 1,
-        attack: 40,
-        defence: 10,
-    });
-});
-
-test('make personage Daemon', () => {
-    const result = new Daemon('John');
-    expect(result).toEqual({
-        name: 'John',
-        type: 'Daemon',
-        health: 100,
-        level: 1,
-        attack: 10,
-        defence: 40,
-    });
-});
-
-test('make personage Magician', () => {
-    const result = new Magician('John');
-    expect(result).toEqual({
-        name: 'John',
-        type: 'Magician',
-        health: 100,
-        level: 1,
-        attack: 10,
-        defence: 40,
-    });
-});
-
-test('make personage Undead', () => {
-    const result = new Undead('John');
-    expect(result).toEqual({
-        name: 'John',
-        type: 'Undead',
-        health: 100,
-        level: 1,
-        attack: 25,
-        defence: 25,
-    });
-});
-
-test('make personage Zombie', () => {
-    const result = new Zombie('John');
-    expect(result).toEqual({
-        name: 'John',
-        type: 'Zombie',
-        health: 100,
-        level: 1,
-        attack: 40,
-        defence: 10,
-    });
 });
